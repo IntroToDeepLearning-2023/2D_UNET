@@ -21,6 +21,29 @@ pip install -r requirements.txt
 ## 2. Dataset
 The dataset used for training is the SustainBenchDataset. Ensure that you have the dataset available or modify the code to load your dataset.
 
+### Accessing Data on GCP
+
+To access the dataset on GCP, follow these steps:
+
+1. **GCP Account Setup:**
+   - Ensure you have access to the Google Cloud Platform with the necessary permissions.
+
+2. **Dataset Location:**
+   - The dataset is stored in a GCP Storage Bucket. You can find the dataset at the following location: `gs://your-bucket/dataset-folder`.
+
+3. **Downloading the Dataset:**
+   - Use the following command to list files in the dataset folder:
+
+     ```bash
+     !gsutil ls gs://data_ctm/data/data/africa_crop_type_mapping/ghana/
+     ```
+
+     You can download specific files using `gsutil cp` command.
+
+     ```bash
+     !gsutil cp gs://data_ctm/data/data/africa_crop_type_mapping/ghana/your_file.csv .
+     ```
+
 ## 3. Model Architecture
 The implemented model is a 2D UNet with multiple encoders for different satellite data sources (S2, S1, and Planet). The UNet architecture is defined in the `UNet_planet` class in the `2D_UNET_Model.py` file.
 
