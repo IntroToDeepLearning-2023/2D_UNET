@@ -26,9 +26,9 @@ The implemented model is a 2D UNet with multiple encoders for different satellit
 
 ## 4. Training
 
-Training is performed in the `train.py` script. Key configurations such as learning rate, loss weights, and epochs can be adjusted in the `config` dictionary.
+*1. Configure Parameters:* Adjust key configurations in the `config` dictionary in the `train.py` script. You can set the learning rate, loss weights, epochs, etc.
 
-To start training, run:
+*2. Start Training:* Run the following command to start training:
 
 `python train.py`
 
@@ -49,6 +49,10 @@ The training and validation metrics are monitored using wandb. You can view the 
 To log in and view the dashboard, run:
 
 `wandb login`
+
+## 4. Inference
+
+After training, you can use the trained model for inference on new data. Modify the `inference.py` script or create a new script for your specific use case.
 
 Important Note:
 
