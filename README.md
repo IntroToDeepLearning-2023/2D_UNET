@@ -17,8 +17,7 @@ This repository contains code for training a UNet-based model for crop type segm
 
 Use the following command to clone the repository:
 
-```bash
-git clone https://github.com/IntroToDeepLearning-2023/2D_UNET.git
+`git clone https://github.com/IntroToDeepLearning-2023/2D_UNET.git`
 
 Install the required packages using the following command:
 
